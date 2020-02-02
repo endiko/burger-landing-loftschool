@@ -1,0 +1,43 @@
+// colors
+$white: #ffffff;
+$yellow: #f9b43b;
+$orange: #e45028;
+$red_orange: #e35028;
+$light_yellow: #f9d19d;
+$black: #131313;
+$hover_color: #c1401e;
+
+
+//layout vars
+$container-width: 940px;
+$footer-height: 60px;
+$min-section-height: 650px;
+
+
+//layout
+
+@import "layout/_normalize";
+@import "layout/_settings";
+@import "layout/_fonts";
+
+//sections
+
+@import "sections/_first";
+@import "sections/_best";
+@import "sections/_slider";
+@import "sections/_team";
+@import "sections/_menu";
+@import "sections/_reviews";
+@import "sections/_form";
+@import "sections/_map";
+@import "sections/_modals";
+
+// fancybox
+
+@import "fancybox/_fancybox";
+
+
+// owl carousel
+
+@import "owl-carousel/_owl.carousel";
+

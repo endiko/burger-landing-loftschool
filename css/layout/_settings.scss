@@ -1,0 +1,155 @@
+body, html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+body {
+	font-size: 16px;
+	line-height: 1.42;
+	color: #fff;
+	overflow: hidden;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+* {
+	box-sizing: border-box;
+}
+
+/*	@mixins */
+
+@mixin gagalin {
+	font-family: 'Gagalin-Regular';
+}
+
+@mixin ubuntul {
+	font-family: 'Ubuntu-Light';
+}
+
+@mixin ubuntum {
+	font-family: 'Ubuntu-Medium';
+}
+
+@mixin ubuntub {
+	font-family: 'Ubuntu-Bold';
+}
+
+@mixin lifehack {
+	font-family: 'Lifehack-Medium';
+}
+
+@mixin title-white {
+	color: #fff;
+	@include section-title;
+}
+
+@mixin title-yellow {
+	color: $yellow;
+	@include section-title;
+}
+
+@mixin section-title {
+	@include gagalin;
+	font-size: 72px;
+}
+
+@mixin button {
+	@include ubuntum;
+	color: #fff;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 12px 15px;
+	font-size: 13px;
+	border-radius: 5px;
+}
+
+@mixin control-button {
+	position: absolute;
+	fill: #fff;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin form-elements {
+	border-width: 1px solid rgb(209, 207, 203);
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  height: 34px;
+}
+
+/*	@mixins END: ;*/
+
+.wrapper {
+	overflow: hidden;
+	height: 100%;
+	//min-height: 100%;
+	min-width: $container-width + 20px;
+
+	&:after {
+		content: "";
+		display: block;
+	}
+}
+
+.main__content {
+	height: 100%;
+	transition: 1s;
+	transform: translate3d(0, 0, 0);
+}
+
+.section {
+	height: 100vh;
+	min-height: $min-section-height;
+	background-size: cover;
+	text-align: center;
+}
+
+.container {
+	width: $container-width;
+	margin: 0 auto;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+	font-weight: normal;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+
+	li {
+		list-style: none;
+	}
+
+}
+
+a {
+	text-decoration: none;
+	color: $black;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	font-size: 14px;
+	@include ubuntul;
+}
+
+
+%clearfix {
+	&:after{
+		content: "";
+	    display: block;
+	    clear: both;
+	}
+}
+
+

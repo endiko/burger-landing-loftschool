@@ -1,0 +1,35 @@
+.best {
+	background: url('../img/bg/bg_best.jpg') 50% no-repeat;
+	background-size: cover;
+	color: #2f3234;
+}
+
+.best__title {
+	@include section-title;
+	margin-bottom: 90px;
+}
+
+.best__list {
+	@extend %clearfix;
+}
+
+.best__item {
+	float: left;
+	width: 33%;
+}
+
+.best__icon {
+	margin-bottom: 30px;
+}
+
+.best__slogan {
+	@include lifehack;
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+.best__desc {
+	@include ubuntul;
+	font-size: 14px;
+	line-height: 24px;
+}

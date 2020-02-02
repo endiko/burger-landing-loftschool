@@ -1,0 +1,88 @@
+.menu {
+	background: url('../img/bg/bg_menu.jpg') 50% no-repeat;
+	position: relative;
+	background-size: cover;
+}
+
+.menu__title {
+	@include title-white;
+	position: absolute;
+	top: 110px;
+	left: 92px;
+}
+
+.menu-accordion__list {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+
+	@extend %clearfix;
+}
+
+.menu-accordion__item {
+	float: left;
+	height: 100%;
+
+	@extend %clearfix;
+
+	&.active {
+		.menu-accordion__trigger-title {
+			color: $yellow;
+		}
+
+		.menu-accordion__content {
+			width: 540px;
+		}
+	}
+
+	&:hover .menu-accordion__trigger-title {
+		color: $yellow;
+		transition: .5s;
+	}
+}
+
+.menu-accordion__trigger {
+	height: 100%;
+	display: block;
+	width: 80px;
+	float: left;
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+}
+
+.menu-accordion__trigger-title {
+	@include gagalin;
+	font-size: 40px;
+	line-height: 64px;
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	height: 80px;
+	margin-top: -40px;
+	white-space: nowrap;
+	width: 650px;
+	left: 50%;
+	margin-left: -320px;
+	transform: rotate(-90deg);
+	text-align: center;
+}
+
+.menu-accordion__content {
+	background-color: rgba(47, 50, 52, 0.929);
+	width: 0;
+  	height: 100%;
+  	display: block;
+  	color: #fff;
+  	font-size: 14px;
+  	line-height: 24px;
+  	@include ubuntul;
+  	text-align: left;
+  	overflow: hidden;
+}
+
+.menu-accordion__text {
+  	width: 540px;
+  	padding: 60px 35px;
+}

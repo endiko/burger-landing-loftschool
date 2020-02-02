@@ -1,0 +1,171 @@
+.form {
+	background: url('../img/bg/bg_form.jpg') 50% no-repeat;
+	background-size: cover;
+}
+
+.form__title {
+	@include title-yellow;
+	margin-bottom: 70px;
+}
+
+.order__form {
+	@extend %clearfix;
+
+	text-align: left;
+}
+
+.form__left {
+	float: left;
+	width: 45%;
+}
+
+.row__wrapper {
+	margin-bottom: 20px;
+}
+
+.row__wrapper-two {
+	@extend %clearfix;
+
+	.form__label {
+		float: left;
+		width: calc(100% / 2 - 10px);
+		margin-left: 20px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+
+	
+}
+
+.row__wrapper-four {
+	@extend %clearfix;
+
+	.address__label {
+		float: left;
+		width: calc(100% / 4 - 15px);
+		margin-left: 20px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}
+
+.one__column {
+	display: block;
+}
+
+.label__text {
+	@include ubuntul;
+	font-size: 14px;
+}
+
+.form__input {
+  @include form-elements;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.form__right {
+	float: right;
+	width: 45%;
+}
+
+.form__input-textarea {
+  @include form-elements;
+  height: 108px;
+  resize: vertical;
+}
+
+.radio-label {
+	margin-right: 15px;
+}
+
+.radio__original,
+.checkbox__original {
+	display: none;
+}
+
+.radio__fake,
+.checkbox__fake {
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	background: #fff;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	margin-right: 10px;
+
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-radius: 50%;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background: $orange;
+		transition: width .5s, height .4s;
+	}
+}
+
+.checkbox__fake {
+	border-radius: 0;
+
+	&:after {
+		background: transparent;
+	}
+}
+
+.radio__original:checked + .radio__fake:after {
+  width: 7px;
+  height: 7px;
+}
+
+.checkbox__original:checked + .checkbox__fake:after {
+	width: 11px;
+	height: 9px;
+	fill: $orange;
+	background: url('../img/icons/check.svg') 50% 50% no-repeat;
+	background-size: contain;
+}
+
+.label__text-ib {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.order__button {
+	@include button;
+	background-color: $orange;
+	border: none;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $hover_color;
+		transition: .5s;
+	}
+}
+
+.order__button-reset {
+	background: transparent;
+	border: none;
+	@include ubuntul;
+	font-size: 14px;
+	text-transform: none;
+
+	&:hover {
+		color: $yellow;
+		background-color: transparent;
+		transition: .5s;
+	}
+}

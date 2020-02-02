@@ -1,0 +1,66 @@
+.yandex__map {
+	height: calc(100% - 60px);
+}
+
+
+/*		footer 		*/
+
+.footer {
+	height: 60px;
+	background-color: $black;
+	position: relative;
+	bottom: 0;
+}
+
+.footer__wrapper {
+	@extend %clearfix;
+}
+
+.footer__contacts {
+	float: left;
+	width: 50%;
+	text-align: left;
+	vertical-align: middle;
+	font-size: 14px;
+}
+
+.footer__address {
+	@include ubuntul;
+	margin-bottom: 5px;
+}
+
+.footer__phone-icon {
+	fill: $orange;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+.footer__phone {
+	@include ubuntub;
+	color: $orange;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.footer__socials {
+	float: left;
+	width: 50%;
+	text-align: right;
+	margin-top: 12px;
+}
+
+.social__item {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.social__icon {
+	width: 20px;
+	height: 20px;
+	fill: #595959;
+
+	&:hover {
+		fill: #fff;
+	}
+}
